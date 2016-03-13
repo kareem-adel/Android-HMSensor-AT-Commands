@@ -106,4 +106,10 @@ public class BLEConfig extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        mBluetoothGatt.disconnect();
+        mBluetoothGatt.close();
+        super.onBackPressed();
+    }
 }
